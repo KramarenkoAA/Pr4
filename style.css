@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+body {
+    background: #0f1115;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(14, 60px);
+    gap: 8px;
+    background: #1a1c22;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+}
+
+/* Загальний стиль клавіш */
+.key {
+    height: 55px;
+    background: linear-gradient(145deg, #2a2d35, #1b1d23);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 6px rgba(0,0,0,0.6),
+        inset 0 1px 1px rgba(255,255,255,0.1);
+
+    transition: 0.15s;
+}
+
+/* наведення */
+.key:hover {
+    background: #30343f;
+}
+
+/* натискання */
+.key:active,
+.key.active {
+    transform: translateY(2px);
+    box-shadow:
+        inset 0 2px 6px rgba(0,0,0,0.8);
+    background: #00adb5;
+    color: black;
+}
+
+/* спеціальні клавіші */
+.esc { background: #7b1e1e; 
+    grid-column: span 2
+}
+
+.space {
+    grid-column: span 6;
+}
+
+.backspace {
+    grid-column: span 2;
+}
+
+.tab {
+    grid-column: span 2;
+}
+
+.caps {
+    grid-column: span 2;
+}
+
+.enter {
+    grid-column: span 2;
+}
+
+.shift {
+    grid-column: span 2;
+}
+
+.ctrl {
+    grid-column: span 2;
+}
